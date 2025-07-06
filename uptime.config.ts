@@ -137,7 +137,7 @@ const workerConfig: WorkerConfig = {
       id: 'mail_system',
       name: '邮件系统',
       method: 'TCP_PING',
-      target: 'mx.nya.one:25',
+      target: 'mx.nya.one:465',
       tooltip: '喵窝的邮件处理系统',
       statusPageLink: 'https://docs.nya.one/peripheral/email/use/',
       timeout: 5000,
