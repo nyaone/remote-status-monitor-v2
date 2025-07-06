@@ -79,7 +79,7 @@ export default function MonitorList({
                   }}
                 >
                   {group[groupName].length - countDownCount(state, group[groupName])}/
-                  {group[groupName].length} Operational
+                  {group[groupName].length} 在线
                 </Text>
               </div>
             </Accordion.Control>
