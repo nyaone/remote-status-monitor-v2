@@ -30,14 +30,14 @@ export default function OverallStatus({
   let statusString = ''
   let icon = <IconAlertCircle style={{ width: 64, height: 64, color: '#b91c1c' }} />
   if (state.overallUp === 0 && state.overallDown === 0) {
-    statusString = 'No data yet'
+    statusString = '暂无数据'
   } else if (state.overallUp === 0) {
-    statusString = 'All systems not operational'
+    statusString = '电脑说我们死定了'
   } else if (state.overallDown === 0) {
-    statusString = 'All systems operational'
+    statusString = '系统一切正常'
     icon = <IconCircleCheck style={{ width: 64, height: 64, color: '#059669' }} />
   } else {
-    statusString = `Some systems not operational (${state.overallDown} out of ${
+    statusString = `部分系统失能 (${state.overallDown} / ${
       state.overallUp + state.overallDown
     })`
   }
@@ -75,10 +75,10 @@ export default function OverallStatus({
         {statusString}
       </Title>
       <Title mt="sm" style={{ textAlign: 'center', color: '#70778c' }} order={5}>
-        Last updated on:{' '}
+        最后更新于:{' '}
         {`${new Date(state.lastUpdate * 1000).toLocaleString()} (${
           currentTime - state.lastUpdate
-        } sec ago)`}
+        } 秒前)`}
       </Title>
 
       {filteredMaintenances.map((maintenance, idx) => (
