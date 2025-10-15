@@ -179,16 +179,6 @@ const workerConfig: WorkerConfig = {
       body: '{ "detail": false }',
     },
     {
-      id: 'dev_matrix',
-      name: 'Matrix (DEV)',
-      method: 'GET',
-      target: 'https://dev-matrix.nya.one/_matrix/client/versions',
-      tooltip: '喵窝的即时通讯服务（开发环境）',
-      hideLatencyChart: false,
-      expectedCodes: [200],
-      timeout: 10000,
-    },
-    {
       id: 'dev_api_wrap',
       name: 'API Wrap (DEV)',
       method: 'GET',
