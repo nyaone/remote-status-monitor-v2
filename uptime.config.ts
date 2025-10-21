@@ -15,7 +15,7 @@ const pageConfig: PageConfig = {
     '💓 核心系统': ['misskey', 'object_storage', 'media_proxy'],
     '✨ 周边生态': ['relay', 'matrix', 'mail_system'],
     '🛠️ 辅助功能': ['api_wrap', 'backup_domain'],
-    '🧪 开发环境': ['dev_misskey', 'dev_matrix', 'dev_api_wrap'],
+    '🧪 开发环境': ['dev_misskey', 'dev_api_wrap'],
   },
 }
 
