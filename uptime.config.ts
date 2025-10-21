@@ -15,7 +15,7 @@ const pageConfig: PageConfig = {
     '💓 核心系统': ['misskey', 'object_storage', 'media_proxy'],
     '✨ 周边生态': ['relay', 'matrix', 'mail_system'],
     '🛠️ 辅助功能': ['api_wrap', 'backup_domain'],
-    '🧪 开发环境': ['dev_misskey', 'dev_api_wrap'],
+    '🧪 开发环境': ['dev_misskey', 'dev_api_wrap', 'dev_media_proxy_rs'],
   },
 }
 
@@ -184,6 +184,16 @@ const workerConfig: WorkerConfig = {
       method: 'GET',
       target: 'https://dev-api.nya.one',
       tooltip: '喵窝的 API 封装（开发环境）',
+      hideLatencyChart: false,
+      expectedCodes: [200],
+      timeout: 10000,
+    },
+    {
+      id: 'dev_media_proxy_rs',
+      name: '媒体代理 (DEV)',
+      method: 'GET',
+      target: 'https://r-dev.n1mp.org',
+      tooltip: '喵窝的媒体代理重制版（开发环境）',
       hideLatencyChart: false,
       expectedCodes: [200],
       timeout: 10000,
