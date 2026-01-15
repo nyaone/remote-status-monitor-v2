@@ -95,7 +95,7 @@ const workerConfig: WorkerConfig = {
       id: 'object_storage',
       name: '对象存储',
       method: 'GET',
-      target: 'https://sh.nfs.pub/nyaone/ff02042e-524e-48e8-bb27-17621d96b13a.png',
+      target: 'https://public.nyaone-object-storage.com/nyaone/ff02042e-524e-48e8-bb27-17621d96b13a.png',
       tooltip: '喵窝的对象（文件）存储服务',
       hideLatencyChart: false,
       expectedCodes: [200],
