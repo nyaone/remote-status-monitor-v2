@@ -105,10 +105,10 @@ const workerConfig: WorkerConfig = {
       id: 'media_proxy',
       name: '媒体代理',
       method: 'GET',
-      target: 'https://o.n1mp.org',
+      target: 'https://r.n1mp.org',
       tooltip: '喵窝的媒体文件代理服务',
       hideLatencyChart: false,
-      expectedCodes: [400],
+      expectedCodes: [200],
       timeout: 10000,
     },
     {
