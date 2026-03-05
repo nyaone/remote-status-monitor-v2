@@ -17,6 +17,8 @@ const pageConfig: PageConfig = {
     '🛠️ 辅助功能': ['api_wrap', 'backup_domain'],
     '🧪 开发环境': ['dev_misskey', 'dev_api_wrap', 'dev_media_proxy_rs'],
   },
+  // [OPTIONAL] Set the path to your favicon, default to '/favicon.png' if not specified
+  favicon: 'https://public.nyaone-object-storage.com/nyaone/ff02042e-524e-48e8-bb27-17621d96b13a.png',
 }
 
 const workerConfig: WorkerConfig = {
