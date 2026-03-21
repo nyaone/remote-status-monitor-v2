@@ -82,7 +82,7 @@ const workerConfig: WorkerConfig = {
       id: 'misskey',
       name: 'Misskey',
       method: 'POST',
-      target: 'https://nya.one/api/meta',
+      target: 'https://nya.one/api/ping',
       tooltip: '喵窝的主站服务',
       statusPageLink: 'https://nya.one',
       hideLatencyChart: false,
@@ -91,7 +91,7 @@ const workerConfig: WorkerConfig = {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: '{ "detail": false }',
+      body: '{}',
     },
     {
       id: 'object_storage',
