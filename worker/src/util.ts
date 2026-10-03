@@ -51,18 +51,18 @@ function formatStatusChangeNotification(
   const timeIncidentStartFormatted = dateFormatter.format(new Date(timeIncidentStart * 1000))
 
   if (isUp) {
-    return `✅ ${monitor.name} is up! \nThe service is up again after being down for ${downtimeDuration} minutes.`
+    return `🟢 「${monitor.name}」 恢复 (异常持续 ${downtimeDuration}分钟)`
   } else if (timeNow == timeIncidentStart) {
-    return `🔴 ${
+    return `🔴 「${
       monitor.name
-    } is currently down. \nService is unavailable at ${timeNowFormatted}. \nIssue: ${
-      reason || 'unspecified'
+    }」 于 [${timeNowFormatted}] 出现异常: ${
+      reason || '未知'
     }`
   } else {
-    return `🔴 ${
+    return `🔴 「${
       monitor.name
-    } is still down. \nService is unavailable since ${timeIncidentStartFormatted} (${downtimeDuration} minutes). \nIssue: ${
-      reason || 'unspecified'
+    }」 于 [${timeIncidentStartFormatted}] 出现 (持续 ${downtimeDuration} 分钟) 的异常: ${
+      reason || '未知'
     }`
   }
 }

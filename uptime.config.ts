@@ -221,21 +221,25 @@ const workerConfig: WorkerConfig = {
       timeout: 10000,
     },
   ],
+  // Notification settings https://github.com/lyc8503/UptimeFlare/wiki/Setup-notification
   notification: {
-    // [Optional] apprise API server URL
-    // if not specified, no notification will be sent
-    // appriseApiServer: 'https://apprise.example.com/notify',
-    // // [Optional] recipient URL for apprise, refer to https://github.com/caronc/apprise
-    // // if not specified, no notification will be sent
-    // recipientUrl: 'tgram://bottoken/ChatID',
-    // // [Optional] timezone used in notification messages, default to "Etc/GMT"
-    // timeZone: 'Asia/Shanghai',
-    // // [Optional] grace period in minutes before sending a notification
-    // // notification will be sent only if the monitor is down for N continuous checks after the initial failure
-    // // if not specified, notification will be sent immediately
-    // gracePeriod: 5,
-    // // [Optional] disable notification for monitors with specified ids
-    // skipNotificationIds: ['foo_monitor', 'bar_monitor'],
+    webhook: {
+      url: require('process').env.NOTIFICATION_WEBHOOK_URL as string,
+      method: 'POST',
+      headers: {
+        "X-Webhook-Secret": require('process').env.NOTIFICATION_WEBHOOK_SECRET as string,
+      },
+      payloadType: 'json',
+      payload: {
+        text: '$MSG',
+      },
+    },
+    timeZone: 'Asia/Shanghai',
+    gracePeriod: 5,
+    // [Optional] disable notification for monitors with specified ids
+    skipNotificationIds: [],
+    // [Optional] suppress extra notifications for error reason changes during an incident, default to false
+    // skipErrorChangeNotification: true,
   },
   callbacks: {
     onStatusChange: async (
