@@ -139,7 +139,7 @@ const workerConfig: WorkerConfig = {
       id: 'mail_system',
       name: '邮件系统',
       method: 'TCP_PING',
-      target: 'mail.nya.one:25',
+      target: 'mail.nya.one:143', // Connections to port 25 are prohibited
       tooltip: '喵窝的邮件处理系统',
       statusPageLink: 'https://docs.nya.one/peripheral/email/',
       timeout: 5000,
